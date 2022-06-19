@@ -30,7 +30,7 @@ const Theme = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={value}>
-      <ThemeProvider theme={theme === "light" ? lightTheme : lightTheme}>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles />
         {children}
       </ThemeProvider>

@@ -1,7 +1,7 @@
-import React from "react";
+import MyProjects from "../../components/UserDashBoard/MyProjects/MyProjects";
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return <MyProjects />;
 };
 
 export default Dashboard;
