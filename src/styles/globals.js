@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         background-color: ${({ theme }) => theme.colors.background};
-        transition: background-color 0.2s ease;
+        transition: background-color 0.2s cubic-bezier(0.4, 0, 1, 1);
         cursor: default;
     }
 

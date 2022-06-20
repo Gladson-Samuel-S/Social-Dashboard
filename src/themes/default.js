@@ -11,10 +11,17 @@ export const lightTheme = {
     neutral: "#ffffff",
     white: "#fff",
     grey: "#eff2f5",
+    lightBlue: "#00b2ff",
+    red: "red",
     text: "#3f4254",
     subText: "#a1a5c0",
+    tooltip: "#ffffff",
+    progress: "#eff2f5",
     almostTransparent: "rgba(255, 255, 255, 0.1)",
-    hover: "47be7d",
+    hover: {
+      primary: "#47be7d",
+      secondary: "#f7f9fb",
+    },
   },
 
   status: {
@@ -35,6 +42,25 @@ export const lightTheme = {
       background: "#f1faff",
     },
   },
+
+  statusDark: {
+    InProgress: {
+      text: "#0bb779",
+      background: "#1c3238",
+    },
+    Pending: {
+      text: "#a0c1de",
+      background: "#323248",
+    },
+    Overdue: {
+      text: "#f04e60",
+      background: "#3a2434",
+    },
+    Completed: {
+      text: "#2152dc",
+      background: "#212e48",
+    },
+  },
 };
 
 export const darkTheme = {
@@ -49,9 +75,16 @@ export const darkTheme = {
     primary: "#0bb783",
     neutral: "#1e1e2d",
     grey: "#1b1b29",
+    lightBlue: "#00b2ff",
     text: "#ffffff",
     subText: "#565669",
     white: "#fff",
+    tooltip: "#323248",
+    progress: "#323248",
     almostTransparent: "rgba(255, 255, 255, 0.1)",
+    hover: {
+      primary: "#47be7d",
+      secondary: "#f7f9fb",
+    },
   },
 };

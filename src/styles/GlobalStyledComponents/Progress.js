@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Progress = styled.div`
   height: 4px;
-  background-color: ${({ theme }) => theme.colors.grey};
+  background-color: ${({ theme }) => theme.colors.progress};
   width: 100%;
   border-radius: 5px;
 

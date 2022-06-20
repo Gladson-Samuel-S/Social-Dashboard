@@ -1,7 +1,11 @@
-import MyProjects from "../../components/UserDashBoard/MyProjects/MyProjects";
+import User from "../../components/UserDashBoard/User/User";
 
 const Dashboard = () => {
-  return <MyProjects />;
+  return (
+    <>
+      <User />
+    </>
+  );
 };
 
 export default Dashboard;

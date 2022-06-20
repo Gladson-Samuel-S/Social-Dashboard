@@ -11,6 +11,8 @@ import {
   CardBody,
   Box,
   Details,
+  CardFooter,
+  NoImage,
 } from "./MyProjectStyled";
 
 // Data
@@ -21,9 +23,11 @@ import {
 import { useState } from "react";
 import { Progress } from "../../../styles/GlobalStyledComponents/Progress";
 import { ToolTip } from "../../../styles/GlobalStyledComponents/ToolTip";
+import { useTheme } from "../../../styles/theme";
 
 const MyProjects = () => {
   const [currentStatus, setCurrentStatus] = useState("Active");
+  const { theme } = useTheme();
 
   return (
     <>
@@ -57,7 +61,18 @@ const MyProjects = () => {
                 />
               </div>
 
-              <Status clr={project.status.text} bg={project.status.background}>
+              <Status
+                clr={
+                  theme === "light"
+                    ? project.status.text
+                    : project.statusDark.text
+                }
+                bg={
+                  theme === "light"
+                    ? project.status.background
+                    : project.statusDark.background
+                }
+              >
                 <p>{project.status.title}</p>
               </Status>
             </CardHeader>
@@ -77,26 +92,38 @@ const MyProjects = () => {
                 </Box>
               </Details>
 
-              <ToolTip>
-                <Progress
-                  className='tooltip'
-                  data-tooltip={`This project is ${project.progress} completed`}
-                  bg={project.status.text}
-                  w={project.progress}
-                >
+              <ToolTip
+                content={`This project is ${project.progress} completed`}
+              >
+                <Progress bg={project.status.text} w={project.progress}>
                   <div className='progressBar'></div>
                 </Progress>
               </ToolTip>
-
-              <ToolTip>
-                <h1
-                  className='tooltip'
-                  data-tooltip={`This project is ${project.progress} completed`}
-                >
-                  Hello
-                </h1>
-              </ToolTip>
             </CardBody>
+
+            <CardFooter>
+              {project.contributers.map((contributer) =>
+                contributer.location !== "" ? (
+                  <ToolTip key={contributer.name} content={contributer.name}>
+                    <img
+                      src={contributer.location}
+                      alt={contributer.name}
+                      height='35'
+                      width='35'
+                    />
+                  </ToolTip>
+                ) : (
+                  <ToolTip key={contributer.name} content={contributer.name}>
+                    <NoImage
+                      key={contributer.name}
+                      bg={contributer.color || "green"}
+                    >
+                      {contributer.name.charAt(0)}
+                    </NoImage>
+                  </ToolTip>
+                )
+              )}
+            </CardFooter>
           </Card>
         ))}
       </Grid>

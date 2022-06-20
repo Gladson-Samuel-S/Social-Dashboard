@@ -15,6 +15,10 @@ export const TitleSection = styled.div`
   align-items: center;
   gap: 10px;
 
+  h3 {
+    font-weight: 600;
+  }
+
   p {
     color: ${({ theme }) => theme.colors.subText};
   }
@@ -71,7 +75,7 @@ export const CardHeader = styled.div`
   .image-wrapper {
     padding: 8px;
     border-radius: 5px;
-    background-color: ${({ theme }) => theme.colors.grey};
+    background-color: ${({ theme }) => theme.colors.progress};
   }
 `;
 
@@ -112,4 +116,37 @@ export const Box = styled.div`
   padding: 10px;
   border-radius: 5px;
   border: 2px dotted ${({ theme }) => theme.colors.grey};
+`;
+
+export const CardFooter = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 10px;
+
+  img {
+    border-radius: 50%;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`;
+
+export const NoImage = styled.span`
+  display: grid;
+  place-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ bg }) => bg};
+  transform: scale(1);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

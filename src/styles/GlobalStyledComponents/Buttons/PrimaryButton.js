@@ -9,11 +9,11 @@ export const PrimaryButton = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: background-color 0.2s ease;
   white-space: nowrap;
 
   &:hover:not([disabled]) {
-    color: ${({ theme }) => theme.colors.hover};
+    background-color: ${({ theme }) => theme.colors.hover.primary};
   }
 
   &:disabled {
