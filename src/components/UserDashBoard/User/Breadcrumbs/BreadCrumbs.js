@@ -2,6 +2,7 @@ import { TabContent } from "../../../../Data/Dashboard-data/UserData";
 import { Tab, TabList, TabPanel } from "react-tabs";
 import { TabsStyled } from "../../../../styles/GlobalStyledComponents/Tabs";
 import MyProjects from "../../MyProjects/MyProjects";
+import Temp from "../Temp/Temp";
 
 const BreadCrumbs = () => {
   return (
@@ -14,14 +15,24 @@ const BreadCrumbs = () => {
         </TabList>
       </div>
 
-      <TabPanel>Hello</TabPanel>
+      <TabPanel>
+        <Temp />
+      </TabPanel>
       <TabPanel>
         <MyProjects />
       </TabPanel>
-      <TabPanel>Hello</TabPanel>
-      <TabPanel>Hello</TabPanel>
-      <TabPanel>Hello</TabPanel>
-      <TabPanel>Hello</TabPanel>
+      <TabPanel>
+        <Temp />
+      </TabPanel>
+      <TabPanel>
+        <Temp />
+      </TabPanel>
+      <TabPanel>
+        <Temp />
+      </TabPanel>
+      <TabPanel>
+        <Temp />
+      </TabPanel>
     </TabsStyled>
   );
 };

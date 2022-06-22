@@ -6,8 +6,6 @@ import { TiTick } from "react-icons/ti";
 import {
   ParentElement,
   Popup,
-  PopupItem,
-  PopupItemsWrapper,
   PopupTitle,
 } from "../../../../styles/GlobalStyledComponents/CustomPopup/Popup";
 import Portal from "../../../../styles/GlobalStyledComponents/Portal/Portal";
@@ -20,7 +18,7 @@ const ActionAreaComponent = ({ CardData }) => {
   const [popperElement, setPopperElement] = useState(null);
 
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    placement: "bottom-start",
+    placement: "bottom-end",
     modifiers: [
       {
         name: "offset",

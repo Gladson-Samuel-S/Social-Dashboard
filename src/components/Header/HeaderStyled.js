@@ -1,10 +1,47 @@
 import styled from "styled-components";
 
+export const HeaderWrapper = styled.nav`
+  aside {
+    display: none;
+  }
+
+  @media (max-width: 960px) {
+    main {
+      display: none;
+    }
+    aside {
+      display: block;
+    }
+  }
+`;
+
 export const AppBar = styled.nav`
   background-color: ${({ theme }) => theme.colors.primary};
   height: 80px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: ${({ theme }) => theme.colors.white};
+
+  svg {
+    display: none;
+    font-size: 18px;
+  }
+
+  @media (max-width: 950px) {
+    svg {
+      display: block;
+    }
+  }
 `;
 
 export const Nav = styled.nav`
@@ -26,6 +63,8 @@ export const NavLogo = styled.div`
   }
 
   @media (max-width: 768px) {
+    gap: 10px;
+
     img {
       height: 25px;
     }
@@ -40,5 +79,9 @@ export const NavAction = styled.div`
 
   svg {
     font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 5px;
   }
 `;

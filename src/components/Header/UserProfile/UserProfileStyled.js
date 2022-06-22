@@ -23,4 +23,10 @@ export const UserProfileContainer = styled.div`
     height: 40px;
     width: 40px;
   }
+
+  @media (max-width: 950px) {
+    div {
+      display: none;
+    }
+  }
 `;

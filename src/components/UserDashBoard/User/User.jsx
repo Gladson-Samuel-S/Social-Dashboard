@@ -30,6 +30,12 @@ import { Box } from "../MyProjects/MyProjectStyled";
 import { Progress } from "../../../styles/GlobalStyledComponents/Progress";
 import BreadCrumbs from "./Breadcrumbs/BreadCrumbs";
 import ActionAreaComponent from "./ActionArea/ActionAreaComponent";
+import {
+  PaginationLinksWrapper,
+  PaginationStatus,
+  PaginationWrapper,
+} from "../../../styles/GlobalStyledComponents/Pagination";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 const User = () => {
   return (
@@ -136,6 +142,30 @@ const User = () => {
       </Wrapper>
 
       <BreadCrumbs />
+
+      <PaginationWrapper>
+        <PaginationStatus>
+          <h3>Showing 1 to 50 of 50 entries</h3>
+        </PaginationStatus>
+        <PaginationLinksWrapper>
+          <li>
+            <span>
+              <BsChevronLeft />
+            </span>
+          </li>
+          <li className='active'>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>
+            <span>
+              <BsChevronRight />
+            </span>
+          </li>
+        </PaginationLinksWrapper>
+      </PaginationWrapper>
     </>
   );
 };
