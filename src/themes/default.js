@@ -18,9 +18,11 @@ export const lightTheme = {
     tooltip: "#ffffff",
     progress: "#eff2f5",
     almostTransparent: "rgba(255, 255, 255, 0.1)",
+    boxShadow: "0px 0px 50px 0px rgb(82 63 105 / 15%)",
     hover: {
       primary: "#47be7d",
       secondary: "#f7f9fb",
+      popup: "#e8fff3",
     },
   },
 
@@ -82,9 +84,11 @@ export const darkTheme = {
     tooltip: "#323248",
     progress: "#323248",
     almostTransparent: "rgba(255, 255, 255, 0.1)",
+    boxShadow: "0px 0px 50px 0px rgb(82 63 105 / 15%)",
     hover: {
       primary: "#47be7d",
       secondary: "#f7f9fb",
+      popup: "#1c3238",
     },
   },
 };

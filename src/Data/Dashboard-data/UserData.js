@@ -42,3 +42,34 @@ export const TabContent = [
   "Followers",
   "Activity",
 ];
+
+export const PopupLinks = [
+  {
+    text: "Create Invoice",
+    icon: "",
+    extraLinks: null,
+  },
+  {
+    text: "Create Payment",
+    icon: "AiFillInfoCircle",
+    extraLinks: null,
+  },
+  {
+    text: "Generate Bill",
+    icon: "",
+    extraLinks: null,
+  },
+  {
+    text: "Subscription",
+    icon: "",
+    extraLinks: {
+      text: ["Plans", "Billing", "Statement"],
+      switch: "Recurring",
+    },
+  },
+  {
+    text: "Settings",
+    icon: "",
+    extraLinks: null,
+  },
+];

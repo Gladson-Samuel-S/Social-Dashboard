@@ -1,11 +1,9 @@
 // Data
 import { Link } from "react-router-dom";
 import { UserHeader, CardData } from "../../../Data/Dashboard-data/UserData";
-import { useState } from "react";
 
 // Styles
 import {
-  ActionArea,
   ActionSection,
   Avatar,
   BoxContainer,
@@ -20,10 +18,7 @@ import {
   Wrapper,
 } from "./UserStyled";
 import { PrimaryButton } from "../../../styles/GlobalStyledComponents/Buttons/PrimaryButton";
-import {
-  OutlinedButton,
-  SecondaryButton,
-} from "../../../styles/GlobalStyledComponents/Buttons/SecondaryButton";
+import { SecondaryButton } from "../../../styles/GlobalStyledComponents/Buttons/SecondaryButton";
 import {
   AiFillFunnelPlot,
   AiOutlineArrowUp,
@@ -33,12 +28,10 @@ import { FaUserAlt, FaLocationArrow } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { Box } from "../MyProjects/MyProjectStyled";
 import { Progress } from "../../../styles/GlobalStyledComponents/Progress";
-import { TiTick } from "react-icons/ti";
 import BreadCrumbs from "./Breadcrumbs/BreadCrumbs";
+import ActionAreaComponent from "./ActionArea/ActionAreaComponent";
 
 const User = () => {
-  const [follow, setFollow] = useState("Follow");
-
   return (
     <>
       <Container>
@@ -94,42 +87,7 @@ const User = () => {
               </div>
 
               <div>
-                <ActionArea>
-                  {follow === "Follow" ? (
-                    <OutlinedButton
-                      bg={({ theme }) => theme.colors.grey}
-                      clr={({ theme }) => theme.colors.text}
-                      onClick={() =>
-                        follow === "Follow"
-                          ? setFollow("Following")
-                          : setFollow("Follow")
-                      }
-                    >
-                      {follow}
-                    </OutlinedButton>
-                  ) : (
-                    <OutlinedButton
-                      bg={({ theme }) => theme.colors.lightBlue}
-                      clr={({ theme }) => theme.colors.white}
-                      onClick={() =>
-                        follow === "Follow"
-                          ? setFollow("Following")
-                          : setFollow("Follow")
-                      }
-                    >
-                      <TiTick />
-                      {follow}
-                    </OutlinedButton>
-                  )}
-
-                  <PrimaryButton>{CardData.hireMe}</PrimaryButton>
-                  <OutlinedButton
-                    bg={({ theme }) => theme.colors.grey}
-                    clr={({ theme }) => theme.colors.text}
-                  >
-                    {CardData.more}
-                  </OutlinedButton>
-                </ActionArea>
+                <ActionAreaComponent CardData={CardData} />
               </div>
             </Flex>
 
